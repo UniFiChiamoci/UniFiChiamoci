@@ -11802,4 +11802,12 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.contattaci_box-contatti {
+  min-height: 1px;
+  width: 100%;
+  background-color: #f1aeb5;
+}
+.contattaci_box-contatto {
+  background-color: yellow;
+}
 /*# sourceMappingURL=contattaci.css.map */

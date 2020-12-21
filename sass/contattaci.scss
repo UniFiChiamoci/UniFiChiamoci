@@ -1,7 +1,38 @@
 
 // Option A: Include all of Bootstrap
 // contattaci.scss
-
-
 @import "./bootstrap/bootstrap.scss";
+
+.contattaci{
+    &_box-contatti{
+            min-height: 1px;
+            width: 100%;
+            background-color: $red-200;
+    }
+
+    &_box-contatto{
+        
+        background-color: yellow;
+        // height: 70%;
+
+        &--insta{
+
+        }
+        &--mail{
+            
+        }
+        &--fb{
+            
+        }
+        &--cell{
+            
+        }
+
+    }
+
+
+}
+
+
+
 
