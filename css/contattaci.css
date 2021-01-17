@@ -1,8 +1,38 @@
-h1 {
-  color: green; }
-
-p {
-  color: blue; }
-
-h1 {
-  background-color: black !important; }
+/* @import "./bootstrap/bootstrap.scss"; */
+.contattaci_box-contatti {
+  height: 70vh;
+  width: 100%;
+  /* background-color: $red-200; */
+}
+.contattaci_box-contatti--recapiti {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contattaci_box-contatto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*  align-items: center;
+   justify-content: center; */
+  width: 100%;
+  height: 100px;
+}
+.contattaci_box-contatto--insta {
+  background-color: pink;
+}
+.contattaci_box-contatto--mail {
+  background-color: powderblue;
+}
+.contattaci_box-contatto--fb {
+  background-color: royalblue;
+}
+.contattaci_box-contatto--cell {
+  background-color: sandybrown;
+}
