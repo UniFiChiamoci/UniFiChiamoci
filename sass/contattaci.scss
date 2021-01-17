@@ -1,13 +1,14 @@
 
+// Custom.scss
 // Option A: Include all of Bootstrap
-// contattaci.scss
-/* @import "./bootstrap/bootstrap.scss"; */
+
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 .contattaci{
     &_box-contatti{
             height: 70vh;
             width: 100%;
-            /* background-color: $red-200; */
+            background-color: $red-200;
             &--recapiti{
                 display: flex;
                 justify-content: center;
