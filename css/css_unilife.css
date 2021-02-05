@@ -1,0 +1,71 @@
+.news-card {
+  margin-bottom: 5%;
+}
+
+.link {
+  color: red;
+}
+
+.cropped-image {
+  width: 100%;
+  min-height: 33vh;
+  object-fit: cover;
+}
+
+.cropped-image-mobile {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.link:hover {
+  color: #aa0000;
+  text-decoration: none;
+}
+
+.propic {
+  width: 64px;
+  height: 64px;
+}
+
+.counters {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.mynavbar {
+  background-color: #cc0000;
+}
+
+.image-frame {
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.preview {
+  max-height: 60%;
+}
+
+.card {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .fixed-size {
+    height: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .fixed-size {
+    height: 400px;
+  }
+}
+
+.p-abs {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*# sourceMappingURL=css_unilife.css.map */
