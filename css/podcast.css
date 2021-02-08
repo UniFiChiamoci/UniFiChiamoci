@@ -1,0 +1,106 @@
+.podcast_1 {
+  font-size: 35px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.text_container {
+  text-align: center;
+  width: 100%;
+  padding-top: 3px;
+}
+
+.podcast_2 {
+  font-size: 19px;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.podcast_3 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+.img_link {
+  height: 125px;
+  width: 97px;
+  margin-top: 10px;
+}
+
+.flexbox {
+  width: 489px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-shrink: center;
+  flex-basis: center;
+  align-items: center;
+}
+
+#left {
+  float: left;
+}
+
+#right {
+  float: right;
+}
+
+.major_div {
+  display: flex;
+  width: 979px;
+  height: 1366px;
+  background-color: rgba(50, 50, 50, 1);
+  margin: auto;
+  border-radius: 5px;
+}
+
+.podcast_container {
+  width: 252px;
+  height: 334px;
+}
+
+.spotify {
+  position: absolute;
+  height: 231px;
+  width: 252px;
+  z-index: 2;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.description_text_container {
+  text-align: center;
+  width: 252px;
+  margin-top: 231px;
+  font-family: Arial, Helvetica, serif;
+  font-style: italic;
+}
+
+.description_title {
+  color: white;
+  font-size: 19px;
+  line-height: normal;
+  margin-bottom: -10px;
+}
+
+.description_text {
+  color: white;
+  font-size: 13px;
+}
+
+.copertina {
+  width: 152px;
+  height: 152px;
+  margin-left: 50px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.spotify_link {
+  width: 66px;
+  height: 20px;
+  margin-left: 216px;
+  margin-top: -157px;
+  position: absolute;
+}

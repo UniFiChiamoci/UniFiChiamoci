@@ -1,0 +1,49 @@
+
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.contattaci{
+    &_box-contatti{
+            height: 70vh;
+            width: 100%;
+            background-color: $red-200;
+            &--recapiti{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+            }
+    }
+
+    &_box-contatto{
+            
+        display: flex;
+       /*  align-items: center;
+        justify-content: center; */
+        width: 100%;
+        height: 100px;
+        
+
+        &--insta{
+            background-color: pink;
+        }
+        &--mail{
+            background-color: powderblue;
+        }
+        &--fb{
+            background-color: royalblue;
+        }
+        &--cell{
+            background-color: sandybrown;
+        }
+
+    }
+
+
+}
+
+
+
+
