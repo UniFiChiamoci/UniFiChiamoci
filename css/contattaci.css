@@ -7975,7 +7975,6 @@ textarea.form-control-lg {
 .user-select-all {
   -webkit-user-select: all !important;
      -moz-user-select: all !important;
-      -ms-user-select: all !important;
           user-select: all !important;
 }
 
@@ -11825,7 +11824,8 @@ textarea.form-control-lg {
   /*  align-items: center;
    justify-content: center; */
   width: 100%;
-  height: 100px;
+  padding: 70px 30px;
+  height: auto;
 }
 .contattaci_box-contatto--insta {
   background-color: pink;
@@ -11838,4 +11838,84 @@ textarea.form-control-lg {
 }
 .contattaci_box-contatto--cell {
   background-color: sandybrown;
+}
+
+.contattaci_recensione {
+  width: 40%;
+  height: 500px;
+  padding: 30px 60px;
+  border: black solid 3px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 10px 10px black;
+          box-shadow: 5px 10px 10px black;
+  display: inline-box;
+  margin: 100px auto;
+}
+.contattaci_recensione-intestazione {
+  color: #b02a37;
+}
+.contattaci_recensione-punteggio {
+  width: 90%;
+  background: #111;
+  padding: 20px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.contattaci_recensione-punteggio--star input {
+  display: none;
+}
+.contattaci_recensione-punteggio--star input:not(:checked) ~ label:hover, .contattaci_recensione-punteggio--star input:not(:checked) ~ label:hover ~ label {
+  color: #fd4;
+}
+.contattaci_recensione-punteggio--star input:checked ~ label {
+  color: #fd4;
+}
+.contattaci_recensione-punteggio--star input#rate-5:checked ~ label {
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
+.contattaci_recensione-punteggio--star label {
+  font-size: 40px;
+  color: #444;
+  padding: 10px;
+  float: right;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.contattaci_recensione-punteggio--star form header {
+  color: red;
+  font-size: 17px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+#rate-1:checked ~ form header:before {
+  content: "Pessimo";
+}
+
+#rate-2:checked ~ form header:before {
+  content: "I don't like it 😒";
+}
+
+#rate-3:checked ~ form header:before {
+  content: "It is awesome 😄";
+}
+
+#rate-4:checked ~ form header:before {
+  content: "I just like it 😎";
+}
+
+#rate-5:checked ~ form header:before {
+  content: "I just love it 😍";
 }

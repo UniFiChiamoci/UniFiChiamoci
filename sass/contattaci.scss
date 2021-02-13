@@ -23,11 +23,12 @@
        /*  align-items: center;
         justify-content: center; */
         width: 100%;
-        height: 100px;
+        padding: 70px 30px;
+        height: auto;
         
-
         &--insta{
             background-color: pink;
+                
         }
         &--mail{
             background-color: powderblue;
@@ -41,9 +42,86 @@
 
     }
 
-
 }
 
 
 
 
+.contattaci_recensione{
+    width: 40%;
+    height: 500px;
+    padding: 30px 60px;
+    border: black solid 3px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px black;
+    display: inline-box;
+    margin: 100px auto;
+    &-intestazione{
+       color: $red-600; 
+    }
+    &-punteggio{
+        width: 90%;
+        background: #111;
+        padding: 20px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        flex-direction: row;
+
+        &--star {
+            &  input{
+            display: none;
+
+                &:not(:checked) ~ label:hover, &:not(:checked) ~ label:hover ~ label{
+                color: #fd4
+                }
+
+                &:checked ~ label{
+                      color: #fd4;
+                }
+
+                &#rate-5:checked ~ label{
+                    color: #fe7;
+                    text-shadow: 0 0 20px #952;
+                }
+            }
+
+            & label{
+            font-size: 40px;
+            color: #444;
+            padding: 10px;
+            float: right;
+            transition: all 0.2s ease;       
+            }
+       
+
+             &  form {
+                & header{
+                    color: red;
+                    font-size: 17px;
+                    transition: all 0.2s ease;
+                    }
+             }
+                       
+        }
+
+    }
+    
+    
+}
+
+#rate-1:checked ~ form header:before{
+    content: "Pessimo";
+}
+#rate-2:checked ~ form header:before{
+    content: "I don't like it 😒";
+}
+#rate-3:checked ~ form header:before{
+    content: "It is awesome 😄";
+}
+#rate-4:checked ~ form header:before{
+    content: "I just like it 😎";
+}
+  #rate-5:checked ~ form header:before{
+    content: "I just love it 😍";
+}
