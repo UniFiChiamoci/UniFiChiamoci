@@ -4,9 +4,19 @@
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-.contattaci{
+.margin{
+    margin-top: 1.5rem;
+}
+
+.container{
+    max-width: 960px;
+}
+
+.contattaci{ 
+    
     &_box-contatti{
             height: 70vh;
+            padding-bottom: 10rem;
             width: 100%;
             background-color: $red-200;
             &--recapiti{
@@ -23,12 +33,11 @@
        /*  align-items: center;
         justify-content: center; */
         width: 100%;
-        padding: 70px 30px;
+        padding: 10rem 2rem;
         height: auto;
         
         &--insta{
-            background-color: pink;
-                
+            background-color: pink;             
         }
         &--mail{
             background-color: powderblue;
@@ -40,6 +49,14 @@
             background-color: sandybrown;
         }
 
+        &>i{
+            display: block;
+        }
+        &>p{
+            margin: 10px;
+            display: block;
+        }
+
     }
 
 }
@@ -48,80 +65,131 @@
 
 
 .contattaci_recensione{
-    width: 40%;
-    height: 500px;
-    padding: 30px 60px;
+    width: 40vw;
+    min-height: 30rem;
+    padding: 3em 3em;
     border: black solid 3px;
     border-radius: 10px;
     box-shadow: 5px 10px 10px black;
     display: inline-box;
-    margin: 100px auto;
+    margin: 10rem auto;
+    /* "DACCI UN VOTO" */
     &-intestazione{
+        padding-bottom: 20px;
        color: $red-600; 
     }
+    /*STELLE + FORM*/
     &-punteggio{
-        width: 90%;
-        background: #111;
-        padding: 20px 30px;
+        width: auto;
+        height: auto;
+        background: rgb(175, 175, 175);
+        padding: 1rem 1rem;
         display: flex;
         align-items: center;
-        justify-content: right;
-        flex-direction: row;
+        flex-direction: column;
+        justify-content: center;
 
-        &--star {
-            &  input{
-            display: none;
+        /*COLORAZIONE STELLE*/
+        &--star {     
+                
+            & input{
+                display: none;
 
                 &:not(:checked) ~ label:hover, &:not(:checked) ~ label:hover ~ label{
-                color: #fd4
+                
+                color: rgb(223, 35, 35);
                 }
 
                 &:checked ~ label{
-                      color: #fd4;
+                      color: rgb(223, 35, 35);
                 }
 
                 &#rate-5:checked ~ label{
-                    color: #fe7;
-                    text-shadow: 0 0 20px #952;
+                    color: rgb(235, 46, 46);
+                    text-shadow: 0 0 20px rgb(177, 50, 50);
                 }
-            }
+
+            }   
 
             & label{
-            font-size: 40px;
-            color: #444;
-            padding: 10px;
-            float: right;
-            transition: all 0.2s ease;       
-            }
-       
+                
+                font-size: 30px;
+                color: rgb(255, 146, 146);
+                padding: 10px;
+                float: right;
+                transition: all 0.2s ease;  
+            }   
+            
+        }
 
-             &  form {
-                & header{
+        &--form{
+            &-textarea{
+                outline: none;
+                background-color: rgb(216, 100, 100); /* Green */
+                box-shadow: -5px 8px  #ff9999;
+                border-color: rgb(216, 110, 110);
+                color: black;
+                padding: 0.7rem 2.8rem;
+                text-decoration: none;
+                display: inline-block;     
+                
+            }
+            &-textarea:hover{
+                background-color: rgb(255, 219, 198); /* Green */
+                border-color: rgb(255, 219, 198);
+            }
+
+            &-btn{
+                background-color: white; /* Green */
+                border: solid 3px #ff9999;
+                border-radius: 0.5rem;
+                color: black;
+                padding: 0.5rem 4rem;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 1rem;
+                box-shadow: -5px 8px  rgb(255, 81, 81);
+                transition: all 0.2s ease;  
+            }
+            &-btn:hover{
+                color: rgb(177, 50, 50);               
+            }
+        }
+    
+       /*  &--descrizione{
+            display: none;
+        }
+        &--messaggio{
+            
+            width: 100%;
+            & form {
+                
+               & header{
                     color: red;
                     font-size: 17px;
                     transition: all 0.2s ease;
-                    }
+                }
              }
-                       
-        }
+        } */
 
     }
     
-    
 }
 
-#rate-1:checked ~ form header:before{
+
+#rate-1:checked ~ .result::before{
     content: "Pessimo";
 }
-#rate-2:checked ~ form header:before{
-    content: "I don't like it 😒";
+#rate-2:checked ~ span#recensione_commento::before{
+    content: "Non un granchè";
 }
-#rate-3:checked ~ form header:before{
-    content: "It is awesome 😄";
+#rate-3:checked ~ span#recensione_commento::before{
+    content: "Buono";
 }
-#rate-4:checked ~ form header:before{
-    content: "I just like it 😎";
+#rate-4:checked ~ span#recensione_commento::before{
+    content: "Molto buono";
 }
-  #rate-5:checked ~ form header:before{
-    content: "I just love it 😍";
+#rate-5:checked ~ span#recensione_commento::before{
+    content: "Fantastico";
 }
