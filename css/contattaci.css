@@ -11812,7 +11812,6 @@ textarea.form-control-lg {
 .contattaci_box-contatti {
   height: 70vh;
   padding-bottom: 10rem;
-  width: 100%;
   background-color: #f1aeb5;
 }
 .contattaci_box-contatti--recapiti {
@@ -11827,14 +11826,17 @@ textarea.form-control-lg {
           align-items: center;
 }
 .contattaci_box-contatto {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  /*  align-items: center;
-   justify-content: center; */
-  width: 100%;
+  width: auto;
   padding: 10rem 2rem;
   height: auto;
+  /* 
+          &>i{
+              display: block;
+          }
+          &>p{
+              margin: 10px;
+              display: block;
+          } */
 }
 .contattaci_box-contatto--insta {
   background-color: pink;
@@ -11848,23 +11850,14 @@ textarea.form-control-lg {
 .contattaci_box-contatto--cell {
   background-color: sandybrown;
 }
-.contattaci_box-contatto > i {
-  display: block;
-}
-.contattaci_box-contatto > p {
-  margin: 10px;
-  display: block;
-}
 
 .contattaci_recensione {
-  width: 40vw;
   min-height: 30rem;
   padding: 3em 3em;
   border: black solid 3px;
   border-radius: 10px;
   -webkit-box-shadow: 5px 10px 10px black;
           box-shadow: 5px 10px 10px black;
-  display: inline-box;
   margin: 10rem auto;
   /* "DACCI UN VOTO" */
   /*STELLE + FORM*/
@@ -11941,6 +11934,21 @@ textarea.form-control-lg {
   text-decoration: none;
   display: inline-block;
 }
+.contattaci_recensione-punteggio--form-textarea::-webkit-input-placeholder {
+  color: #fff0e8;
+}
+.contattaci_recensione-punteggio--form-textarea::-moz-placeholder {
+  color: #fff0e8;
+}
+.contattaci_recensione-punteggio--form-textarea:-ms-input-placeholder {
+  color: #fff0e8;
+}
+.contattaci_recensione-punteggio--form-textarea::-ms-input-placeholder {
+  color: #fff0e8;
+}
+.contattaci_recensione-punteggio--form-textarea::placeholder {
+  color: #fff0e8;
+}
 .contattaci_recensione-punteggio--form-textarea:hover {
   background-color: #ffdbc6;
   /* Green */
@@ -11964,6 +11972,9 @@ textarea.form-control-lg {
 }
 .contattaci_recensione-punteggio--form-btn:hover {
   color: #b13232;
+}
+.contattaci_recensione-punteggio--form-btn:focus {
+  outline: none;
 }
 
 #rate-1:checked ~ .result::before {

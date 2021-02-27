@@ -17,22 +17,20 @@
     &_box-contatti{
             height: 70vh;
             padding-bottom: 10rem;
-            width: 100%;
+            
             background-color: $red-200;
+            &--intestazione{}
             &--recapiti{
+              
                 display: flex;
                 justify-content: center;
-                align-items: center;
-                
+                align-items: center;                
             }
     }
 
     &_box-contatto{
             
-        display: flex;
-       /*  align-items: center;
-        justify-content: center; */
-        width: 100%;
+        width: auto;
         padding: 10rem 2rem;
         height: auto;
         
@@ -48,14 +46,14 @@
         &--cell{
             background-color: sandybrown;
         }
-
+/* 
         &>i{
             display: block;
         }
         &>p{
             margin: 10px;
             display: block;
-        }
+        } */
 
     }
 
@@ -65,13 +63,11 @@
 
 
 .contattaci_recensione{
-    width: 40vw;
     min-height: 30rem;
     padding: 3em 3em;
     border: black solid 3px;
     border-radius: 10px;
     box-shadow: 5px 10px 10px black;
-    display: inline-box;
     margin: 10rem auto;
     /* "DACCI UN VOTO" */
     &-intestazione{
@@ -134,9 +130,14 @@
                 display: inline-block;     
                 
             }
+            &-textarea::placeholder{
+                color: rgb(255, 240, 232);
+            }
+
             &-textarea:hover{
                 background-color: rgb(255, 219, 198); /* Green */
                 border-color: rgb(255, 219, 198);
+                
             }
 
             &-btn{
@@ -154,6 +155,10 @@
             }
             &-btn:hover{
                 color: rgb(177, 50, 50);               
+            }
+            &-btn:focus{
+                outline: none;
+                
             }
         }
     
