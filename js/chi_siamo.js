@@ -1,5 +1,6 @@
 var index = 0;
 var t;
+var temp_index;
 slide();
 
 function slide() {
@@ -20,9 +21,14 @@ function slide() {
   if (index < 1) {
     index = images.length;
   }
+  if(index%19 == 0){
+    temp_index = 18;
+  }else{
+    temp_index = index%19 - 1;
+  }
   images[index - 1].style.display = "block";
-  dots[index - 1].style.backgroundColor = "transparent";
-  dots[index - 1].style.borderColor = "white";
+  dots[temp_index].style.backgroundColor = "transparent";
+  dots[temp_index].style.borderColor = "white";
   t = setTimeout(slide, 3000);
 }
 
@@ -40,6 +46,6 @@ function slide_to_left() {
 
 function switch_to(n) {
   clearTimeout(t);
-  index = n - 1;
+  index = n - 1 + 19 * Math.trunc(index / 19);
   slide();
 }
