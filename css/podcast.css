@@ -2,7 +2,7 @@
   font-size: 35px;
   font-weight: bold;
   font-style: italic;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'oswald';
 }
 
 .text_container {
@@ -14,11 +14,11 @@
 .podcast_2 {
   font-size: 19px;
   font-style: italic;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Arial;
 }
 
 .podcast_3 {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Arial;
   font-size: 20px;
 }
 
