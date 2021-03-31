@@ -7,7 +7,7 @@
   }
 
   .central_text_subdiv {
-    background-color: yellowgreen;
+    background-color: white;
     width: 67.6%;
     height: 583px;
     float: right;
@@ -16,7 +16,7 @@
 
   .central_text_subdiv_text_h2, .central_text_subdiv_text_p {
     margin-left: 15px;
-    color: blue;
+    color: black;
     z-index: 2;
   }
 
