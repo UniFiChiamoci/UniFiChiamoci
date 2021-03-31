@@ -135,7 +135,7 @@
     display: inline;
   }
 }
-@media screen and (min-width: 481px){
+@media screen and (max-width: 481px){
   .central_text {
     height: 583px;
     background-image: url("../../images/sfondocentralechisiamo.jpeg");
