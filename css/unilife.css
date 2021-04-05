@@ -1,5 +1,5 @@
 .news-card {
-  margin-bottom: 5%;
+  margin: 0 2% 5% 2%;
 }
 
 .link {
@@ -10,7 +10,11 @@
   width: 100%;
   min-height: 33vh;
   object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0,0,0,0.3) !important;
 }
+
 
 .cropped-image-mobile {
   width: 100%;
@@ -29,6 +33,7 @@
 }
 
 .counters {
+  text-align: right;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -67,5 +72,8 @@
   top: 0;
   left: 0;
 }
+
+
+
 
 /*# sourceMappingURL=unilife.css.map */
