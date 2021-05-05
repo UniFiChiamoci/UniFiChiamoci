@@ -133,6 +133,7 @@
     margin-left: 3.5px;
     direction: horizontal;
     display: inline;
+    position: absolute;
   }
 }
 @media screen and (max-width: 481px){
