@@ -1,6 +1,20 @@
 .major{
   background-color: red;
   margin: auto;
-  height: 125px;
-  width: 250px;
+  height: 415px;
+  width: 630px;
+  margin-top: 130px;
+  padding-top: 15px;
+  text-align: center;
+}
+.title{
+  margin-top: 0px;
+  color: white;
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+.accesso{
+  margin-top: 30px;
+  height: 20px;
+  width: 100px;
 }

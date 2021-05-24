@@ -6,8 +6,17 @@
     <link rel="stylesheet" href="../css/login.css" type="text/css">
   </head>
   <body>
-    <div class="major">
-      <h1>banana</h1>
-    </div>
+    <?php include '../login.php' ?>
+    <form method="POST">
+      <div class="major">
+        <h1 class="title">Accedi</h1>
+        <h1>Username</h1>
+        <input type="text" name="Username">
+        <h1>Password</h1>
+        <input type="password" name="Password">
+        <br>
+        <input type="submit" name="button_to_log" value="Accedi" class="accesso">
+      </div>
+    </form>
   </body>
 </html>
