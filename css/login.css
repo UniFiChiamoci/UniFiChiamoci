@@ -23,4 +23,5 @@
 }
 body{
   background-image: url(../images/sfondo_login.jpg);
+  background-repeat: no-repeat;
 }
