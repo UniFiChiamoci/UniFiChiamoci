@@ -22,6 +22,6 @@
   width: 100px;
 }
 body{
-  background-image: url(../images/sfondo_login.jpg);
-  background-repeat: no-repeat;
+  background: url(../images/sfondo_login.jpg) no-repeat center fixed;
+  background-size: cover;
 }
