@@ -6,3 +6,7 @@ function change_view() {
     button.setAttribute('type',"password");
   }
 }
+
+function check_in_database(username,password){
+  
+}
