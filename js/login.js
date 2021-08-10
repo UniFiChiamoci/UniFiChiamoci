@@ -7,6 +7,8 @@ function change_view() {
   }
 }
 
-function check_in_database(username,password){
+function check_in_database(){
+  var username = document.getElementById("username_input");
+  var password = document.getElementById("password_input");
   
 }
