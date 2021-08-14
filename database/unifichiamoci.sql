@@ -19,7 +19,7 @@
 -- Current Database: `unifichiamoci`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `unifichiamoci` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `unifichiamoci`  /*!80016 DEFAULT ENCRYPTION='N' */;
 
 USE `unifichiamoci`;
 
@@ -42,7 +42,7 @@ CREATE TABLE `article` (
   UNIQUE KEY `id` (`id`),
   KEY `author_id` (`author_id`),
   CONSTRAINT `article_ibfk_1` FOREIGN KEY (`author_id`) REFERENCES `member` (`code`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 -- fixme zona modificabile
 
@@ -68,7 +68,7 @@ CREATE TABLE `article_pictures` (
   `picture` blob,
   PRIMARY KEY (`article_id`),
   CONSTRAINT `article_pictures_ibfk_1` FOREIGN KEY (`article_id`) REFERENCES `article` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 -- fixme zona modificabile
 
@@ -93,7 +93,7 @@ CREATE TABLE `authors_articles` (
   `author_id` varchar(10) NOT NULL,
   `article_id` bigint unsigned NOT NULL,
   PRIMARY KEY (`author_id`,`article_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 -- fixme zona modificabile
 
@@ -118,10 +118,10 @@ CREATE TABLE `member` (
   `code` varchar(10) NOT NULL,
   `name` varchar(20) NOT NULL,
   `surname` varchar(20) NOT NULL,
-  'password' varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
   `picture` blob,
   PRIMARY KEY (`code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 -- fixme zona modificabile
 
@@ -148,7 +148,7 @@ CREATE TABLE `member_role` (
   PRIMARY KEY (`member_id`),
   KEY `role` (`role`),
   CONSTRAINT `member_role_ibfk_1` FOREIGN KEY (`role`) REFERENCES `member` (`code`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 -- fixme zona modificabile
 
@@ -175,7 +175,7 @@ CREATE TABLE `section_articles` (
   PRIMARY KEY (`section_name`,`article_id`),
   KEY `article_id` (`article_id`),
   CONSTRAINT `section_articles_ibfk_1` FOREIGN KEY (`article_id`) REFERENCES `article` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 -- fixme zona modificabile
 
@@ -200,7 +200,7 @@ CREATE TABLE `sections` (
   `name` varchar(20) NOT NULL,
   `description` text NOT NULL,
   PRIMARY KEY (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB;
 /*!40101 SET character_set_client = @saved_cs_client */;
 -- fixme zona modificabile
 
