@@ -24,6 +24,7 @@
       //$password = htmlspecialchars($_GET["password_input"]);
       //echo $username;
       //echo $password;
+      //http://localhost:8888/GitHub/Unifichiamoci/php/login.php
        ?>
     <p id="error">Username o password errati.<br> Se il problema persiste, contattare l'amministratore</p>
   </body>
