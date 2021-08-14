@@ -8,7 +8,10 @@
   <body>
     <script src="../js/login.js" charset="utf-8"></script>
     <?php
-    echo "banana";
+    if (condition) {
+      $username = htmlspecialchars("username_input")
+      $password = htmlspecialchars("password_input")
+    }
      ?>
     <div class="major">
       <form method="POST">
