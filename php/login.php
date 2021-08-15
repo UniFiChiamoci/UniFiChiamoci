@@ -28,10 +28,22 @@
         if (!$mysqli) {
           exit();
         }
-        $result = mysqli_query($mysqli,"SELECT username, password FROM member", );
+        $result = mysqli_query($mysqli,"SELECT code, username, password FROM member", );
         if (mysqli_num_rows($result) > 0) {
+          $check = False;
           while($row = mysqli_fetch_assoc($result)) {
-            echo $row[0]['username'];
+            if ($row['username'] == $username) {
+              if ($row['password'] == $password) {
+                $member_id = $row['code'];
+                $check = True;
+                break;
+              }
+            }
+          }
+          if ($check == True) {
+            // code...
+          }else {
+            // code...
           }
         }
         mysqli_close($mysqli);
