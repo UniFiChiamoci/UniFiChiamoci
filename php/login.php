@@ -24,14 +24,17 @@
         $username = htmlspecialchars($_REQUEST["username"]);
         $password = htmlspecialchars($_REQUEST["Password"]);
         $db_port = 8889;
-        $mysqli = new mysqli('localhost','root','root','information_schema');
-        if ($mysqli->connect_error) {
-          echo 'Errno: '.$mysqli->connect_errno;
-          echo '<br>';
-          echo 'Error: '.$mysqli->connect_error;
+        $mysqli = mysqli_connect('localhost','root','root','unifichiamoci');
+        if (!$mysqli) {
           exit();
         }
-        $mysqli->close();
+        $result = mysqli_query($mysqli,"SELECT username, password FROM member", );
+        if (mysqli_num_rows($result) > 0) {
+          while($row = mysqli_fetch_assoc($result)) {
+            echo $row[0]['username'];
+          }
+        }
+        mysqli_close($mysqli);
        ?>
     <p id="error">Username o password errati.<br> Se il problema persiste, contattare l'amministratore</p>
   </body>
