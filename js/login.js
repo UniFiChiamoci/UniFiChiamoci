@@ -5,10 +5,9 @@ function change_view() {
   }else if (button.getAttribute('type') == "text") {
     button.setAttribute('type',"password");
   }
+  document.getElementById('error').style.display = 'block';
 }
 
-function check_in_database(){
-  var username = document.getElementById("username_input");
-  var password = document.getElementById("password_input");
-  
+function bad_result(){
+  document.getElementById('error').style.display = 'block';
 }

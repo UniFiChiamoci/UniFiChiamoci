@@ -43,7 +43,7 @@
           if ($check == True) {
             // code...
           }else {
-            // code...
+            //echo 'banana';
           }
         }
         mysqli_close($mysqli);

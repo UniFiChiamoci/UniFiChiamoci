@@ -26,9 +26,9 @@ body{
   background-size: cover;
 }
 #error{
+  display: none;
   color: red;
   text-align: center;
-  display: none;
 }
 .viewchanger{
   margin-left: 280px;
