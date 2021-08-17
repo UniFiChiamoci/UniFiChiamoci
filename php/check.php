@@ -32,8 +32,8 @@
     if ($check == True) {
       // code to get login…
     }else {
-      echo "<script>alert(Username o password errati.<br> Se il problema persiste, contattare l'amministratore);</script>";
       header("Location: http://localhost:8888/GitHub/Unifichiamoci/php/login.php");
+      echo "<script>alert(`Username o password errati.<br> Se il problema persiste, contattare lamministratore`);</script>";
     }
   }
   mysqli_close($mysqli);
