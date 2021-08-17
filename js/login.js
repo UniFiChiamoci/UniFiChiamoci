@@ -6,3 +6,4 @@ function change_view() {
     button.setAttribute('type',"password");
   }
 }
+alert('banana');
