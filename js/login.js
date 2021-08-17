@@ -6,7 +6,3 @@ function change_view() {
     button.setAttribute('type',"password");
   }
 }
-
-function bad_result(){
-  document.getElementById('error').style.display = 'block';
-}
