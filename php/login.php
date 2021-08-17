@@ -21,7 +21,6 @@
       </div>
       <?php
         //http://localhost:8888/GitHub/Unifichiamoci/php/login.php
-        echo "banana";
         try {
           $username = htmlspecialchars($_REQUEST["username"]);
           $password = htmlspecialchars($_REQUEST["Password"]);
@@ -52,9 +51,9 @@
             }
           }
           if ($check == True) {
-            // code...
+            echo $member_id;
           }else {
-            //echo 'banana';
+            echo "<script>document.getElementById('error').style.display = 'block';</script>";
           }
         }
         mysqli_close($mysqli);

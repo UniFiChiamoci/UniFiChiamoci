@@ -5,7 +5,6 @@ function change_view() {
   }else if (button.getAttribute('type') == "text") {
     button.setAttribute('type',"password");
   }
-  document.getElementById('error').style.display = 'block';
 }
 
 function bad_result(){
