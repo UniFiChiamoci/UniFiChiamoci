@@ -21,8 +21,19 @@
       </div>
       <?php
         //http://localhost:8888/GitHub/Unifichiamoci/php/login.php
-        $username = htmlspecialchars($_REQUEST["username"]);
-        $password = htmlspecialchars($_REQUEST["Password"]);
+        echo "banana";
+        try {
+          $username = htmlspecialchars($_REQUEST["username"]);
+          $password = htmlspecialchars($_REQUEST["Password"]);
+          throw new \Exception("Error");
+        } catch (\Exception $e) {
+          if ($e=="Error") {
+            echo $e;
+          }else {
+            $username = htmlspecialchars($_REQUEST["username"]);
+            $password = htmlspecialchars($_REQUEST["Password"]);
+          }
+        }
         $db_port = 8889;
         $mysqli = mysqli_connect('localhost','root','root','unifichiamoci');
         if (!$mysqli) {
