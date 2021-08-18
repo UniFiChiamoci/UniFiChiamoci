@@ -7,6 +7,18 @@
   </head>
   <body>
     <script src="../js/login.js" charset="utf-8"></script>
+    <?php
+    $db_port = 8889;
+    $mysqli = mysqli_connect('localhost','root','root','unifichiamoci');
+    if (!$mysqli) {
+      exit();
+    }
+    $result = mysqli_query($mysqli,"SELECT access FROM member");
+    if (mysqli_num_rows($result) > 0) {
+      while($row = mysqli_fetch_assoc($result)) {
+
+      }
+     ?>
       <div class="major">
         <form method="POST" action="check.php">
           <h1 class="title">Accedi</h1>

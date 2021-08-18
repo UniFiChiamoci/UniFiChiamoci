@@ -120,6 +120,7 @@ CREATE TABLE `member` (
   `surname` varchar(20) NOT NULL,
   `username` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL,
+  `access` boolean DEFAULT False,
   `picture` blob,
   PRIMARY KEY (`code`)
 ) ENGINE=InnoDB;
@@ -224,3 +225,8 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2021-07-12 23:12:22
+
+
+INSERT INTO `member` (`code`, `name`, `surname`, `username`, `password`, `picture`) VALUES
+('a', 'b', 'c', 'd', 'e', 0x66),
+('mar-ros', 'Mario', 'Rossi', 'susina', 'rantolo', 0x62616e616e612e6a7067);
