@@ -7,18 +7,6 @@
   </head>
   <body>
     <script src="../js/login.js" charset="utf-8"></script>
-    <?php
-    $db_port = 8889;
-    $mysqli = mysqli_connect('localhost','root','root','unifichiamoci');
-    if (!$mysqli) {
-      exit();
-    }
-    $result = mysqli_query($mysqli,"SELECT access FROM member");
-    if (mysqli_num_rows($result) > 0) {
-      while($row = mysqli_fetch_assoc($result)) {
-
-      }
-     ?>
       <div class="major">
         <form method="POST" action="check.php">
           <h1 class="title">Accedi</h1>
@@ -32,5 +20,12 @@
         <input type="submit"name="password_view" value="Mostra Password" onclick="change_view();" class="viewchanger">
       </div>
     <p id="error">Username o password errati.<br> Se il problema persiste, contattare l'amministratore</p>
+    <?php
+    if (isset($_GET['check_text'])){
+      if (htmlspecialchars($_GET["check_text"]) == "error") {
+        echo "<script>document.getElementById('error').style.visibility = 'visible';</script>";
+      }
+    }
+     ?>
   </body>
 </html>
